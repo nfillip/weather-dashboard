@@ -109,66 +109,81 @@
             <div class="col-12 col-md-10 col-lg-9">
 
                 <div class="card mb-3 col-12 col-md-10 col-lg-9">
-                    <img src="./assets/hold-photo.PNG" class="card-img-top" alt="hold photo">
+                    
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                      <h5 class="card-title" id = "current-card-title">Card title</h5>
+                      <img src="./assets/hold-photo.PNG" alt="icon" id = "current-card-icon">
+                      <p class="card-text" id  ="current-card-temp">Temperature.</p>
+                      <p class="card-text" id = "current-card-humidity">Humidity.</p>
+                      <p class="card-text" id = "current-card-wind">Wind.</p>
                     </div>
                 </div> 
 
-                <div class = "row">
+                <div class = "row" id = "five-day-cards">
+                    <div class="card" style="width: 10rem;">
+                        
+                        <div class="card-body">
+                          <h5 id = "date0" class="card-title">Date</h5>
+                        </div>
+                        <img src="./assets/hold-photo.PNG" class="card-img-top" alt="hold" id = "icon0">
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item" id = "temp0">Temp</li>
+                          <li class="list-group-item" id = "humidity0">Humidity</li>
+                          <li class="list-group-item" id = "wind0">Wind</li>
+                        </ul>
+                    </div>
 
                     <div class="card" style="width: 10rem;">
-                        <img src="./assets/hold-photo.PNG" class="card-img-top" alt="hold">
+                        
                         <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <h5 id = "date1" class="card-title">Date</h5>
                         </div>
+                        <img src="./assets/hold-photo.PNG" class="card-img-top" alt="hold" id = "icon1">
                         <ul class="list-group list-group-flush">
-                          <li class="list-group-item">An item</li>
-                          <li class="list-group-item">A second item</li>
-                          <li class="list-group-item">A third item</li>
+                          <li class="list-group-item" id = "temp1">Temp</li>
+                          <li class="list-group-item" id = "humidity1">Humidity</li>
+                          <li class="list-group-item" id = "wind1">Wind</li>
                         </ul>
-                        <div class="card-body">
-                          <a href="#" class="card-link">Card link</a>
-                          <a href="#" class="card-link">Another link</a>
-                        </div>
-                      </div>
+                    </div>
 
-                      <div class="card" style="width: 10rem;">
-                        <img src="./assets/hold-photo.PNG" class="card-img-top" alt="hold">
+                    <div class="card" style="width: 10rem;">
+                        
                         <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <h5 id = "date2" class="card-title">Date</h5>
                         </div>
+                        <img src="./assets/hold-photo.PNG" class="card-img-top" alt="hold" id = "icon2">
                         <ul class="list-group list-group-flush">
-                          <li class="list-group-item">An item</li>
-                          <li class="list-group-item">A second item</li>
-                          <li class="list-group-item">A third item</li>
+                          <li class="list-group-item" id = "temp2">Temp</li>
+                          <li class="list-group-item" id = "humidity2">Humidity</li>
+                          <li class="list-group-item" id = "wind2">Wind</li>
                         </ul>
-                        <div class="card-body">
-                          <a href="#" class="card-link">Card link</a>
-                          <a href="#" class="card-link">Another link</a>
-                        </div>
-                      </div>
+                    </div>
 
-                      <div class="card" style="width: 10rem;">
-                        <img src="./assets/hold-photo.PNG" class="card-img-top" alt="hold">
+                    <div class="card" style="width: 10rem;">
+                        
                         <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <h5 id = "date3" class="card-title">Date</h5>
                         </div>
+                        <img src="./assets/hold-photo.PNG" class="card-img-top" alt="hold" id = "icon3">
                         <ul class="list-group list-group-flush">
-                          <li class="list-group-item">An item</li>
-                          <li class="list-group-item">A second item</li>
-                          <li class="list-group-item">A third item</li>
+                          <li class="list-group-item" id = "temp3">Temp</li>
+                          <li class="list-group-item" id = "humidity3">Humidity</li>
+                          <li class="list-group-item" id = "wind3">Wind</li>
                         </ul>
+                    </div>
+
+                    <div class="card" style="width: 10rem;">
+                        
                         <div class="card-body">
-                          <a href="#" class="card-link">Card link</a>
-                          <a href="#" class="card-link">Another link</a>
+                          <h5 id = "date4" class="card-title">Date</h5>
                         </div>
-                      </div>
+                        <img src="./assets/hold-photo.PNG" class="card-img-top" alt="hold" id = "icon4">
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item" id = "temp4">Temp</li>
+                          <li class="list-group-item" id = "humidity4">Humidity</li>
+                          <li class="list-group-item" id = "wind4">Wind</li>
+                        </ul>
+                    </div>
                 </div>
                 
 
