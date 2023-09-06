@@ -50,6 +50,7 @@ fetch("https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=0b1
      
     })
 }
+//displays current weather
 function displayCurrentWeather(data){
     console.log(data);
     console.log("current City: " + cityName);
@@ -65,6 +66,7 @@ function displayCurrentWeather(data){
     currentCardWind.text("current wind speed " + data.wind.speed + "mph");
 }
 
+//displays 5 day forecast
 function display5DayForecast(dataFiveDay){
      for(var x = 0 ; x<5 ; x++){
         console.log(5)
@@ -80,6 +82,13 @@ function display5DayForecast(dataFiveDay){
         $("#icon" + x).attr("src" , y )
     
     }
+        resetInput();
+}
+
+//resets input box
+function resetInput(){
+    console.log(50);
+    searchBar.val("");
 }
 //EVENT LISTENER
 searchBar.keypress(function (event) {
@@ -88,6 +97,7 @@ searchBar.keypress(function (event) {
     if (event.keyCode === 13) {
         event.preventDefault();
         fetchData(searchBar.val());
+        
         console.log(searchBar.val());
     }
   })
