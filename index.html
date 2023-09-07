@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/reset.css" />
     <!-- jquery UI LINK -->
     <link
@@ -17,192 +17,348 @@
 
     <link rel="stylesheet" href="./assets/style.css" />
     <title>Document</title>
-</head>
-<body>
-    <!-- HEader -->
-    <nav class="py-2 bg-body-tertiary border-bottom">
-        <div class="container d-flex flex-wrap">
-          <ul class="nav me-auto">
-            <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2 active" aria-current="page">Weather-Channel</a></li>
-            
-            <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">Learning</a></li>
-            
-            <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">Wildfires-USA</a></li>
-          </ul>
-          <ul class="nav">
-            <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">About Me</a></li>
-            
-          </ul>
-        </div>
-      </nav>
-      <header class="py-3 mb-4 border-bottom">
-        <div class="container d-flex flex-wrap justify-content-center">
-          <a href="/" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto link-body-emphasis text-decoration-none">
-            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-            <span class="fs-4">The Weather Dashboard</span>
+  </head>
+  <body id="full-background">
+    <!-- HEADER -->
+    <nav
+      class="py-2 bg-body-tertiary border-bottom"
+      style="background-color: #e3f2fd"
+    >
+      <div class="container d-flex flex-wrap">
+        <ul class="nav me-auto">
+          <li class="nav-item">
+            <a
+              href="https://weather.com/?cm_ven=PS_GGL_Branded_04012019_1&par=MK_GGL&tpcc=mktg-search-Google-acquisition&gclid=Cj0KCQjwxuCnBhDLARIsAB-cq1qPAfpNzNk_6bWYb-t2JQY8iNJgA8NxsDFxkj9iwsw6SECR6GG6hcgaAtapEALw_wcB"
+              class="nav-link link-body-emphasis px-2 active"
+              aria-current="page"
+              target="_blank"
+              >Weather-Channel</a
+            >
+          </li>
+
+          <li class="nav-item">
+            <a
+              href="https://en.wikipedia.org/wiki/Weather"
+              class="nav-link link-body-emphasis px-2"
+              target="_blank"
+              >Learning</a
+            >
+          </li>
+
+          <li class="nav-item">
+            <a
+              href="https://fire.airnow.gov/"
+              class="nav-link link-body-emphasis px-2"
+              target="_blank"
+              >Wildfires-USA</a
+            >
+          </li>
+        </ul>
+        <ul class="nav">
+          <li class="nav-item">
+            <a
+              href="https://nfillip.github.io/fillip-portfolio/"
+              class="nav-link link-body-emphasis px-2"
+              target="_blank"
+              >About Me</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <header class="py-3 mb-4 border-bottom bg-primary" data-bs-theme="blue">
+      <div class="container d-flex flex-wrap justify-content-center">
+        <a
+          href="/"
+          class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto link-body-emphasis text-decoration-none"
+        >
+          <svg class="bi me-2" width="40" height="32">
+            <use xlink:href="#bootstrap"></use>
+          </svg>
+          <span class="fs-4" id="header-color">The Weather Dashboard</span>
+        </a>
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0" role="search">
+          <input
+            id="search-input"
+            type="search"
+            class="form-control"
+            placeholder="Search a city..."
+            aria-label="Search"
+            style="background-color: #e3f2fd; border: none"
+          />
+        </form>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="row">
+        <!-- SIDE BAR -->
+        <div
+          class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary col-12 col-md-2 col-lg-3"
+          style="width: 280px; background-color: #e3f2fd"
+          id="div-side-bar"
+        >
+          <a
+            href="#"
+            class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+          >
+            <svg class="bi pe-none me-2" width="40" height="32">
+              <use xlink:href="#bootstrap"></use>
+            </svg>
+            <span class="fs-4">Quick Cities</span>
           </a>
-          <form class="col-12 col-lg-auto mb-3 mb-lg-0" role="search">
-            <input id = "search-input" type="search" class="form-control" placeholder="Search..." aria-label="Search">
-          </form>
+          <hr />
+          <ul class="nav nav-pills flex-column mb-auto" id="link-ul">
+            <li>
+              <a href="#" class="nav-link link-body-emphasis" id="quick-link">
+                <svg
+                  class="bi pe-none me-2"
+                  width="16"
+                  height="16"
+                  id="Houston"
+                ></svg
+                >Houston
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-body-emphasis" id="quick-link">
+                <svg class="bi pe-none me-2" width="16" height="16">
+                  <use xlink:href="#speedometer2"></use></svg
+                >San Francisco
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-body-emphasis" id="quick-link">
+                <svg class="bi pe-none me-2" width="16" height="16">
+                  <use xlink:href="#table"></use></svg
+                >Denver
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-body-emphasis" id="quick-link">
+                <svg class="bi pe-none me-2" width="16" height="16">
+                  <use xlink:href="#grid"></use></svg
+                >Chicago
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-body-emphasis" id="quick-link">
+                <svg class="bi pe-none me-2" width="16" height="16">
+                  <use xlink:href="#people-circle"></use></svg
+                >New York
+              </a>
+            </li>
+
+            <a
+              href="#"
+              class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none my-3"
+            >
+              <svg class="bi pe-none me-2" width="40" height="32">
+                <use xlink:href="#bootstrap"></use>
+              </svg>
+              <span class="fs-4">Recently Searched</span>
+            </a>
+            <hr />
+
+            <li>
+              <a href="#" class="nav-link link-body-emphasis">
+                <svg class="bi pe-none me-2" width="16" height="16">
+                  <use xlink:href="#grid"></use>
+                </svg>
+                <span id="recent-search-0"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-body-emphasis">
+                <svg class="bi pe-none me-2" width="16" height="16">
+                  <use xlink:href="#grid"></use>
+                </svg>
+                <span id="recent-search-1"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-body-emphasis">
+                <svg class="bi pe-none me-2" width="16" height="16">
+                  <use xlink:href="#grid"></use>
+                </svg>
+                <span id="recent-search-2"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-body-emphasis">
+                <svg class="bi pe-none me-2" width="16" height="16">
+                  <use xlink:href="#grid"></use>
+                </svg>
+                <span id="recent-search-3"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-body-emphasis">
+                <svg class="bi pe-none me-2" width="16" height="16">
+                  <use xlink:href="#grid"></use>
+                </svg>
+                <span id="recent-search-4"></span>
+              </a>
+            </li>
+          </ul>
         </div>
-      </header>
-
-      <div class="container">
-        <!-- Content here -->
-        <div class="row">
-            
-          
-            <!-- Side Bar -->
-            <div class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary col-12 col-md-2 col-lg-3" style="width: 280px;">
-                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                  <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-                  <span class="fs-4">Quick Cities</span>
-                </a>
-                <hr>
-                <ul class="nav nav-pills flex-column mb-auto">
-                    <li>
-                        <a href="#" class="nav-link link-body-emphasis">
-                          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
-                          Houston
-                        </a>
-                      </li>
-                  <li>
-                    <a href="#" class="nav-link link-body-emphasis">
-                      <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
-                      San Francisco
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="nav-link link-body-emphasis">
-                      <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
-                      Denver
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="nav-link link-body-emphasis">
-                      <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
-                      Chicago
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="nav-link link-body-emphasis">
-                      <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
-                      New York
-                    </a>
-                  </li>
-                </ul>
-                
-              </div>
-            <div class="col-12 col-md-10 col-lg-9">
-
-                <div class="card mb-3 col-12 col-md-10 col-lg-9">
-                    
-                    <div class="card-body">
-                      <h5 class="card-title" id = "current-card-title">Card title</h5>
-                      <img src="./assets/hold-photo.PNG" alt="icon" id = "current-card-icon">
-                      <p class="card-text" id  ="current-card-temp">Temperature.</p>
-                      <p class="card-text" id = "current-card-humidity">Humidity.</p>
-                      <p class="card-text" id = "current-card-wind">Wind.</p>
-                    </div>
-                </div> 
-
-                <div class = "row" id = "five-day-cards">
-                    <div class="card" style="width: 10rem;">
-                        
-                        <div class="card-body">
-                          <h5 id = "date0" class="card-title">Date</h5>
-                        </div>
-                        <img src="./assets/hold-photo.PNG" class="card-img-top" alt="hold" id = "icon0">
-                        <ul class="list-group list-group-flush">
-                          <li class="list-group-item" id = "temp0">Temp</li>
-                          <li class="list-group-item" id = "humidity0">Humidity</li>
-                          <li class="list-group-item" id = "wind0">Wind</li>
-                        </ul>
-                    </div>
-
-                    <div class="card" style="width: 10rem;">
-                        
-                        <div class="card-body">
-                          <h5 id = "date1" class="card-title">Date</h5>
-                        </div>
-                        <img src="./assets/hold-photo.PNG" class="card-img-top" alt="hold" id = "icon1">
-                        <ul class="list-group list-group-flush">
-                          <li class="list-group-item" id = "temp1">Temp</li>
-                          <li class="list-group-item" id = "humidity1">Humidity</li>
-                          <li class="list-group-item" id = "wind1">Wind</li>
-                        </ul>
-                    </div>
-
-                    <div class="card" style="width: 10rem;">
-                        
-                        <div class="card-body">
-                          <h5 id = "date2" class="card-title">Date</h5>
-                        </div>
-                        <img src="./assets/hold-photo.PNG" class="card-img-top" alt="hold" id = "icon2">
-                        <ul class="list-group list-group-flush">
-                          <li class="list-group-item" id = "temp2">Temp</li>
-                          <li class="list-group-item" id = "humidity2">Humidity</li>
-                          <li class="list-group-item" id = "wind2">Wind</li>
-                        </ul>
-                    </div>
-
-                    <div class="card" style="width: 10rem;">
-                        
-                        <div class="card-body">
-                          <h5 id = "date3" class="card-title">Date</h5>
-                        </div>
-                        <img src="./assets/hold-photo.PNG" class="card-img-top" alt="hold" id = "icon3">
-                        <ul class="list-group list-group-flush">
-                          <li class="list-group-item" id = "temp3">Temp</li>
-                          <li class="list-group-item" id = "humidity3">Humidity</li>
-                          <li class="list-group-item" id = "wind3">Wind</li>
-                        </ul>
-                    </div>
-
-                    <div class="card" style="width: 10rem;">
-                        
-                        <div class="card-body">
-                          <h5 id = "date4" class="card-title">Date</h5>
-                        </div>
-                        <img src="./assets/hold-photo.PNG" class="card-img-top" alt="hold" id = "icon4">
-                        <ul class="list-group list-group-flush">
-                          <li class="list-group-item" id = "temp4">Temp</li>
-                          <li class="list-group-item" id = "humidity4">Humidity</li>
-                          <li class="list-group-item" id = "wind4">Wind</li>
-                        </ul>
-                    </div>
-                </div>
-                
-
-
-
+        <div class="col-12 col-md-10 col-lg-9">
+          <!-- MAIN CURRENT TEMPERATURE CARD -->
+          <div class="card mb-3 col-12 col-md-10 col-lg-9 mx-1" id="main-card">
+            <div class="card-body card-b-sizing">
+              <h5 class="card-title" id="current-card-title">Card title</h5>
+              <img
+                src="#"
+                alt="icon"
+                id="current-card-icon"
+              />
+              <p class="card-text" id="current-card-temp">Temperature.</p>
+              <p class="card-text" id="current-card-humidity">Humidity.</p>
+              <p class="card-text" id="current-card-wind">Wind.</p>
             </div>
-              
+          </div>
+          <!-- 5 SIDE CARDS WITH 5 DAY FORECAST -->
+          <div class="row mx-1" id="five-day-cards">
+            <div class="card mx-1" style="width: 10rem" id="side-card">
+              <div class="card-body">
+                <h5 id="date0" class="card-title">Date</h5>
+              </div>
+              <img
+                src="./assets/hold-photo.PNG"
+                class="card-img-top"
+                alt="hold"
+                id="icon0"
+              />
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item" id="temp0">Temp</li>
+                <li class="list-group-item" id="humidity0">Humidity</li>
+                <li class="list-group-item" id="wind0">Wind</li>
+              </ul>
+            </div>
 
+            <div class="card mx-1" style="width: 10rem" id="side-card">
+              <div class="card-body">
+                <h5 id="date1" class="card-title">Date</h5>
+              </div>
+              <img
+                src="./assets/hold-photo.PNG"
+                class="card-img-top"
+                alt="hold"
+                id="icon1"
+              />
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item" id="temp1">Temp</li>
+                <li class="list-group-item" id="humidity1">Humidity</li>
+                <li class="list-group-item" id="wind1">Wind</li>
+              </ul>
+            </div>
 
-            
+            <div class="card mx-1" style="width: 10rem" id="side-card">
+              <div class="card-body">
+                <h5 id="date2" class="card-title">Date</h5>
+              </div>
+              <img
+                src="./assets/hold-photo.PNG"
+                class="card-img-top"
+                alt="hold"
+                id="icon2"
+              />
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item" id="temp2">Temp</li>
+                <li class="list-group-item" id="humidity2">Humidity</li>
+                <li class="list-group-item" id="wind2">Wind</li>
+              </ul>
+            </div>
 
+            <div class="card mx-1" style="width: 10rem" id="side-card">
+              <div class="card-body">
+                <h5 id="date3" class="card-title">Date</h5>
+              </div>
+              <img
+                src="./assets/hold-photo.PNG"
+                class="card-img-top"
+                alt="hold"
+                id="icon3"
+              />
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item" id="temp3">Temp</li>
+                <li class="list-group-item" id="humidity3">Humidity</li>
+                <li class="list-group-item" id="wind3">Wind</li>
+              </ul>
+            </div>
+
+            <div class="card mx-1" style="width: 10rem" id="side-card">
+              <div class="card-body">
+                <h5 id="date4" class="card-title">Date</h5>
+              </div>
+              <img
+                src="./assets/hold-photo.PNG"
+                class="card-img-top"
+                alt="hold"
+                id="icon4"
+              />
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item" id="temp4">Temp</li>
+                <li class="list-group-item" id="humidity4">Humidity</li>
+                <li class="list-group-item" id="wind4">Wind</li>
+              </ul>
+            </div>
+          </div>
         </div>
-
+      </div>
     </div>
 
+    <!-- FOOTER -->
+    <footer
+      class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top px-1"
+      style="background-color: #e3f2fd; color: blue"
+    >
+      <p class="col-md-4 mb-0">© 2021 Company, Inc</p>
 
-      <!-- Footer -->
-      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <p class="col-md-4 mb-0 text-muted">© 2021 Company, Inc</p>
-    
-        <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-          <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-        </a>
-    
-        <ul class="nav col-md-4 justify-content-end">
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Weather-Channel</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Learning</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Wildfire-USA</a></li>
-          
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About Me</a></li>
-        </ul>
-      </footer>
+      <a
+        href="/"
+        class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none"
+      >
+        <svg class="bi me-2" width="40" height="32">
+          <use xlink:href="#bootstrap"></use>
+        </svg>
+      </a>
+
+      <ul class="nav col-md-4 justify-content-end">
+        <li class="nav-item">
+          <a
+            href="https://weather.com/?cm_ven=PS_GGL_Branded_04012019_1&par=MK_GGL&tpcc=mktg-search-Google-acquisition&gclid=Cj0KCQjwxuCnBhDLARIsAB-cq1ql6poAUVSNfNpIEb3qMLdRPTStQgLdu1K2RXV29eqalhfLypW8chwaArxMEALw_wcB"
+            target="_blank"
+            class="nav-link px-2"
+            >Weather-Channel</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            href="https://en.wikipedia.org/wiki/Weather"
+            class="nav-link px-2"
+            target="_blank"
+            >Learning</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            href="https://fire.airnow.gov/"
+            class="nav-link px-2"
+            target="_blank"
+            >Wildfire-USA</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            href="https://nfillip.github.io/fillip-portfolio/"
+            class="nav-link px-2 dark-link"
+            target="_blank"
+            >About Me</a
+          >
+        </li>
+      </ul>
+    </footer>
     <!-- jQuery script -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <!-- DayJS script -->
@@ -221,5 +377,5 @@
     ></script>
     <!-- personal JS script -->
     <script src="./assets/script.js"></script>
-</body>
+  </body>
 </html>

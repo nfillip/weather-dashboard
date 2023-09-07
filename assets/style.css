@@ -1,3 +1,41 @@
 body {
     color: black;
 }
+
+#header-color {
+    color: #e3f2fd;
+}
+
+#full-background {
+    background-image: url(./background-body3.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+#main-card {
+    border: .1rem solid blue;
+    background-color: #e3f2fd;
+    border-radius: 10px;
+}
+
+#side-card {
+    border: .1rem solid blue;
+    background-color: #e3f2fd;
+    padding-bottom: .5rem;
+    border-radius: 10px;
+}
+
+img {
+    background-color: white;
+    
+}
+
+#div-side-bar {
+    border: .1rem solid blue;
+    background-color: #e3f2fd;
+    border-radius: 10px
+}
+footer ul li a {
+    color: #e3f2fd;
+}
+
